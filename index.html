@@ -71,8 +71,11 @@
                 font-size: 30px; /* Aumenta o ícone de áudio */
             }
             video {
-                width: 100%; /* Faz o vídeo se ajustar à largura da tela */
+                width: 100%; /* O vídeo ocupará toda a largura do container */
                 height: auto; /* Mantém a proporção do vídeo */
+                max-width: 100%; /* Impede que o vídeo ultrapasse o limite do container */
+                display: block;
+                margin: 0 auto; /* Centraliza o vídeo */
             }
         }
 
@@ -84,8 +87,11 @@
                 font-size: 32px; /* Aumenta o ícone no celular */
             }
             video {
-                width: 100%; /* Faz o vídeo se ajustar à largura da tela */
+                width: 100%; /* O vídeo ocupará toda a largura do container */
                 height: auto; /* Mantém a proporção do vídeo */
+                max-width: 100%; /* Impede que o vídeo ultrapasse o limite do container */
+                display: block;
+                margin: 0 auto; /* Centraliza o vídeo */
             }
         }
     </style>
