@@ -53,30 +53,39 @@
             to { opacity: 1; }
         }
 
+        /* Ajustes para telas menores */
         @media (max-width: 768px) {
             .card {
-                width: 90%; 
+                width: 90%; /* Aumenta a largura da card */
                 padding: 20px;
             }
             h1 {
-                font-size: 24px; 
+                font-size: 24px; /* Reduz o tamanho da fonte no mobile */
             }
             p {
-                font-size: 16px; 
+                font-size: 16px; /* Ajusta o tamanho do texto */
             }
             .audio-control {
                 top: 10px;
                 right: 10px;
-                font-size: 30px; 
+                font-size: 30px; /* Aumenta o ícone de áudio */
+            }
+            video {
+                width: 100%; /* Faz o vídeo se ajustar à largura da tela */
+                height: auto; /* Mantém a proporção do vídeo */
             }
         }
 
         @media (max-width: 480px) {
             h1 {
-                font-size: 20px; 
+                font-size: 20px; /* Diminui ainda mais o título */
             }
             .audio-control {
-                font-size: 32px; 
+                font-size: 32px; /* Aumenta o ícone no celular */
+            }
+            video {
+                width: 100%; /* Faz o vídeo se ajustar à largura da tela */
+                height: auto; /* Mantém a proporção do vídeo */
             }
         }
     </style>
@@ -98,6 +107,7 @@
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            // Garantir que o áudio comece a tocar com um pequeno delay
             setTimeout(() => {
                 const audio = document.getElementById("background-audio");
                 audio.play().catch(error => console.log("Autoplay bloqueado pelo navegador"));
